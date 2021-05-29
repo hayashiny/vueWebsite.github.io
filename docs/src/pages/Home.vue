@@ -14,12 +14,12 @@
         
         <div class="section1">
             <p id="subtextS1"><span id="titleS1">Nothing But The Best</span> <br>Never tried japanese cuisine before? Well, we’re proud to be your first. Crafted from our highly skilled staff, we offer high quality japanese cuisine that will make your taste buds begging for more. Along side delicious food, we also have top of the line customer service that makes you feel like you're right at home. So why not place a visit with us!</p>
-            <img id="imgS1" class="align-right slideIn" src="src\assets\ForWebsite\plates-of-sushi.png">
+            <img id="imgS1" src="src\assets\ForWebsite\plates-of-sushi.png">
         </div>
 
         <div class="section2">
             <p id="subtextS2"><span id="titleS2">Our Goal</span> <br>We understand the daily struggle many of us have to go through and sometimes all of us just want to sit down and relax. That is exactly what we are here for. Simply sit back and enjoy the fantastic food from the east.</p>
-            <img id="imgS2" class="align-left slideIn" src="src\assets\ForWebsite\raw dish.png">
+            <img id="imgS2" src="src\assets\ForWebsite\raw dish.png">
         </div>
   </div>
 </template>
@@ -63,7 +63,7 @@ export default ({
 
 </script>
 
-<style>
+<style scoped>
 html {
     overflow-y:scroll;
     scroll-behavior:smooth;
@@ -195,6 +195,7 @@ body{
     height:400px;
     border:20px solid #85b14270;
     float:right;
+    margin-top:-134px;
 }
 
 #titleS2{
@@ -227,31 +228,11 @@ body{
     height:400px;
     border:20px solid #85b14270;
     float:left;
-    margin-left:23px;
+    margin-left:22px;
+    margin-top:-134px;
 }
 
-.slideIn{
-    opacity:0;
-    transition:all 200ms;
-}
 
-.align-left.slideIn{
-    transform:translate(-40%,-30%) scale(0.95);
-}
-
-.align-right.slideIn{
-    transform: translate(40%,-30%) scale(0.95);
-}
-
-.slideIn.active{
-    opacity:1;
-    transform:translate(0%,-30%) scale(1);
-}
-
-.slideIn.active{
-    opacity:1;
-    transform:translate(0%,-30%) scale(1);
-}
 
 @font-face{
     font-family:AvantGarde;
@@ -296,9 +277,7 @@ body{
     }
 
     #imgS1{
-        width:400px;
-        height:300px;
-        margin-right:100px;
+        display:none;
     }
 
     #subtextS1{
@@ -313,9 +292,7 @@ body{
     }
 
     #imgS2{
-        width:400px;
-        height:300px;
-        margin-left:100px;
+        display:none;
     }
 
     #subtextS2{
@@ -375,9 +352,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
 
     #imgS1{
-        width:400px;
-        height:300px;
-        margin-right:100px;
+        display:none;
     }
 
     #subtextS1{
@@ -392,9 +367,7 @@ and (-webkit-device-pixel-ratio: 2){
     }
 
     #imgS2{
-        width:400px;
-        height:300px;
-        margin-left:100px;
+        display:none;
     }
 
     #subtextS2{
@@ -458,6 +431,14 @@ and (-webkit-device-pixel-ratio: 3){
 
     #titleS2{
         font-size:30px;
+    }
+
+    #imgS1{
+        display:none;
+    }
+
+    #imgS2{
+        display:none;
     }
 }
 
